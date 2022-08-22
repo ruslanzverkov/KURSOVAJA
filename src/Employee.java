@@ -90,27 +90,28 @@ public class Employee {
         System.out.println(salary);
     }
     public static void minSalary() {
-
-            for (int i = 0; i < Main.employees.length&&Main.employees[i] != null; i++) {
-               double salary;
-                if (Main.employees[i]!=null) {
+        double salary=Main.employees[0].getSalary();
+// Сделал допущение , что [0] ячейка не равна null
+        for (int i = 0; i < Main.employees.length&&Main.employees[i] != null; i++) {
+                if (salary<=Main.employees[i].getSalary()) {
                      salary=Main.employees[i].getSalary();
-                    break;
-
                 }
-                System.out.println(salary);
-            }
-
-    }
-
-    public static double maxSalary () {
-        for (int i = 0; i < Main.employees.length; i++) {
-            if (Main.employees[i] != null) {
-
-            }
+            System.out.println(salary);
         }
-        return maxSalary();
     }
+
+    public static void maxSalary() {
+        double salary=Main.employees[0].getSalary();
+// Сделал допущение , что [0] ячейка не равна null
+        for (int i = 0; i < Main.employees.length&&Main.employees[i] != null; i++) {
+            if (salary>=Main.employees[i].getSalary()) {
+                salary=Main.employees[i].getSalary();
+            }
+            System.out.println(salary);
+        }
+    }
+
+
     public static void mediumSalary() {
         for (int i = 0; i < Main.employees.length; i++) {
             if (Main.employees[i] != null) {

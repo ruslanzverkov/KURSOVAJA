@@ -3,7 +3,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        employees[1]=new Employee("Василий Васильевич Корнев",2,20350);
+        employees[0]=new Employee("Василий Васильевич Корнев",2,20350);
         employees[3]=new Employee("Сергей Сергевич Безруков",4,30555);
         employees[5]=new Employee("Андрей Андреевич Сусликов",5,25500);
         employees[6]=new Employee("Александр Александрович", 3, 23330);
@@ -13,6 +13,7 @@ public class Main {
         Employee.takeFullNameEmployees();
         Employee.fullSalary();
         Employee.minSalary();
+        Employee.maxSalary();
     }
 
 
