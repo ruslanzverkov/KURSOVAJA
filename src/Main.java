@@ -9,12 +9,12 @@ public class Main {
         employees[6]=new Employee("Александр Александрович", 3, 23330);
         employees[9]=new Employee("Виктория Викторовна КОшкина",1,24000);
 
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i]!=null) {
-                System.out.println(employees[i]);
-            }
-        }
-
-
+        Employee.takeEmployees();
+        Employee.takeFullNameEmployees();
+        Employee.fullSalary();
+        Employee.minSalary();
     }
+
+
+
 }

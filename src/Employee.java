@@ -63,4 +63,61 @@ public class Employee {
     public int hashCode() {
         return Objects.hash(fullName, department, salary);
     }
+
+    public static void takeEmployees() {
+        for (Employee employee : Main.employees) {
+            if (employee != null) {
+                System.out.println(employee);
+            }
+        }
+    }
+
+    public static void takeFullNameEmployees() {
+        for (int i = 0; i < Main.employees.length; i++) {
+            if (Main.employees[i] != null) {
+                System.out.println(Main.employees[i].getFullName());
+            }
+        }
+    }
+
+    public static void fullSalary() {
+        double salary=0;
+        for (int i = 0; i < Main.employees.length; i++) {
+            if (Main.employees[i] != null) {
+                salary=salary+Main.employees[i].getSalary();
+            }
+        }
+        System.out.println(salary);
+    }
+    public static void minSalary() {
+
+            for (int i = 0; i < Main.employees.length&&Main.employees[i] != null; i++) {
+               double salary;
+                if (Main.employees[i]!=null) {
+                     salary=Main.employees[i].getSalary();
+                    break;
+
+                }
+                System.out.println(salary);
+            }
+
+    }
+
+    public static double maxSalary () {
+        for (int i = 0; i < Main.employees.length; i++) {
+            if (Main.employees[i] != null) {
+
+            }
+        }
+        return maxSalary();
+    }
+    public static void mediumSalary() {
+        for (int i = 0; i < Main.employees.length; i++) {
+            if (Main.employees[i] != null) {
+
+            }
+        }
+    }
+
+
 }
