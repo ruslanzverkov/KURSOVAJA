@@ -93,22 +93,22 @@ public class Employee {
         double salary=Main.employees[0].getSalary();
 // Сделал допущение , что [0] ячейка не равна null
         for (int i = 0; i < Main.employees.length&&Main.employees[i] != null; i++) {
-                if (salary<=Main.employees[i].getSalary()) {
+                if (Main.employees[i].getSalary()<salary) {
                      salary=Main.employees[i].getSalary();
                 }
-            System.out.println(salary);
         }
+        System.out.println(salary);
     }
 
     public static void maxSalary() {
         double salary=Main.employees[0].getSalary();
 // Сделал допущение , что [0] ячейка не равна null
         for (int i = 0; i < Main.employees.length&&Main.employees[i] != null; i++) {
-            if (salary>=Main.employees[i].getSalary()) {
+            if (Main.employees[i].getSalary()>salary) {
                 salary=Main.employees[i].getSalary();
             }
-            System.out.println(salary);
         }
+        System.out.println(salary);
     }
 
 
