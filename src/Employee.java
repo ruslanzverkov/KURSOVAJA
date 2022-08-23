@@ -87,37 +87,45 @@ public class Employee {
                 salary=salary+Main.employees[i].getSalary();
             }
         }
-        System.out.println(salary);
+        System.out.println("Сумма затрат на зарплаты в месяц - "+salary);
     }
     public static void minSalary() {
         double salary=Main.employees[0].getSalary();
-// Сделал допущение , что [0] ячейка не равна null
-        for (int i = 0; i < Main.employees.length&&Main.employees[i] != null; i++) {
-                if (Main.employees[i].getSalary()<salary) {
-                     salary=Main.employees[i].getSalary();
+ //Сделал допущение , что [0] ячейка не равна null
+        for (int i = 0; i < Main.employees.length; i++) {
+                if (Main.employees[i] != null) {
+                    if (Main.employees[i].getSalary()<salary) {
+                        salary=Main.employees[i].getSalary();
+                    }
                 }
+
         }
-        System.out.println(salary);
+       System.out.println("Минимальная зарплата сотрудника - "+salary);
     }
 
     public static void maxSalary() {
         double salary=Main.employees[0].getSalary();
 // Сделал допущение , что [0] ячейка не равна null
-        for (int i = 0; i < Main.employees.length&&Main.employees[i] != null; i++) {
-            if (Main.employees[i].getSalary()>salary) {
-                salary=Main.employees[i].getSalary();
+        for (int i = 0; i < Main.employees.length; i++) {
+            if (Main.employees[i] != null) {
+                if (Main.employees[i].getSalary()>salary) {
+                    salary=Main.employees[i].getSalary();
+                }
             }
         }
-        System.out.println(salary);
+        System.out.println("Максимальная зарплата сотрудника - "+salary);
     }
 
 
     public static void mediumSalary() {
-        for (int i = 0; i < Main.employees.length; i++) {
+        double salary=0;
+        for (int i =0 ; i < Main.employees.length; i++) {
             if (Main.employees[i] != null) {
-
+                salary=salary+Main.employees[i].getSalary();
             }
         }
+        salary=salary/counter;
+        System.out.println("Средняя зарплата сотрудников - "+salary);
     }
 
 
