@@ -45,7 +45,6 @@ public class Main {
     }
     public static void minSalary() {
         double salary=employees[0].getSalary();
-        //Сделал допущение , что [0] ячейка не равна null
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null) {
                 if (employees[i].getSalary()<salary) {
@@ -59,7 +58,6 @@ public class Main {
 
     public static void maxSalary() {
         double salary=employees[0].getSalary();
-// Сделал допущение , что [0] ячейка не равна null
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null) {
                 if (employees[i].getSalary()>salary) {
