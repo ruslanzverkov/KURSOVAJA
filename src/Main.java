@@ -25,7 +25,6 @@ public class Main {
             }
         }
     }
-
     public static void takeFullNameEmployees() {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null) {
@@ -33,7 +32,6 @@ public class Main {
             }
         }
     }
-
     public static void fullSalary() {
         double salary=0;
         for (int i = 0; i < employees.length; i++) {
@@ -46,29 +44,23 @@ public class Main {
     public static void minSalary() {
         double salary=employees[0].getSalary();
         for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null) {
-                if (employees[i].getSalary()<salary) {
+            if (employees[i] == null)continue;
+            if (employees[i].getSalary()<salary) {
                     salary=employees[i].getSalary();
                 }
-            }
-
         }
         System.out.println("Минимальная зарплата сотрудника - "+salary);
     }
-
     public static void maxSalary() {
         double salary=employees[0].getSalary();
         for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null) {
-                if (employees[i].getSalary()>salary) {
-                    salary=employees[i].getSalary();
-                }
+            if (employees[i] == null)continue;
+            if (employees[i].getSalary()>salary) {
+                salary=employees[i].getSalary();
             }
         }
         System.out.println("Максимальная зарплата сотрудника - "+salary);
     }
-
-
     public static void mediumSalary() {
         double salary=0;
         for (int i = 0; i < employees.length; i++) {
@@ -77,8 +69,8 @@ public class Main {
             }
         }
         salary=salary/employees.length; //с логической точки зрения это не являеться ср.зп., т.к. у нас 5 сотрудников, а не 10
-        // как сделать по другому не знаю
-        // проверку на ноль нет смысла делать(как в разборе), потомучто при  emloyees.length==0, массив будет пустой ссоответсвенно и ср .зп.
+        // как сделать по другому я не знаю
+        // проверку на ноль нет смысла делать, потомучто при  emloyees.length==0  -массив будет пустой, ссоответсвенно и ср .зп.
         //будет 0
         System.out.println("Средняя зарплата сотрудников - "+salary);
     }
