@@ -51,82 +51,10 @@ public class Employee {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Employee employee = (Employee) o;
-        return department == employee.department && Double.compare(employee.salary, salary) == 0 && fullName.equals(employee.fullName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(fullName, department, salary);
-    }
-
-    public static void takeEmployees() {
-        for (Employee employee : Main.employees) {
-            if (employee != null) {
-                System.out.println(employee);
-            }
-        }
-    }
-
-    public static void takeFullNameEmployees() {
-        for (int i = 0; i < Main.employees.length; i++) {
-            if (Main.employees[i] != null) {
-                System.out.println(Main.employees[i].getFullName());
-            }
-        }
-    }
-
-    public static void fullSalary() {
-        double salary=0;
-        for (int i = 0; i < Main.employees.length; i++) {
-            if (Main.employees[i] != null) {
-                salary=salary+Main.employees[i].getSalary();
-            }
-        }
-        System.out.println("Сумма затрат на зарплаты в месяц - "+salary);
-    }
-    public static void minSalary() {
-        double salary=Main.employees[0].getSalary();
- //Сделал допущение , что [0] ячейка не равна null
-        for (int i = 0; i < Main.employees.length; i++) {
-                if (Main.employees[i] != null) {
-                    if (Main.employees[i].getSalary()<salary) {
-                        salary=Main.employees[i].getSalary();
-                    }
-                }
-
-        }
-       System.out.println("Минимальная зарплата сотрудника - "+salary);
-    }
-
-    public static void maxSalary() {
-        double salary=Main.employees[0].getSalary();
-// Сделал допущение , что [0] ячейка не равна null
-        for (int i = 0; i < Main.employees.length; i++) {
-            if (Main.employees[i] != null) {
-                if (Main.employees[i].getSalary()>salary) {
-                    salary=Main.employees[i].getSalary();
-                }
-            }
-        }
-        System.out.println("Максимальная зарплата сотрудника - "+salary);
-    }
 
 
-    public static void mediumSalary() {
-        double salary=0;
-        for (int i =0 ; i < Main.employees.length; i++) {
-            if (Main.employees[i] != null) {
-                salary=salary+Main.employees[i].getSalary();
-            }
-        }
-        salary=salary/counter;
-        System.out.println("Средняя зарплата сотрудников - "+salary);
-    }
+
+
 
 
 }
