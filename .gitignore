@@ -1,1 +1,4 @@
-/KURSOVAJA.iml
+*.iml
+/out/
+/.idea/
+
